@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var li = ['a', 'b'];
+	
+	li.push('c');
+	document.write(li);
+	document.write('<br />');	
+	// a, b, c
+
+	li = li.concat(['d', 'e'])
+	document.write(li);
+	document.write('<br />');	
+	// a, b, c, d, e
+
+	li.unshift('z');
+	document.write(li);
+	document.write('<br />');	
+	// z, a, b, c, d, e
+
+	li.splice(2, 0, 'B')
+	document.write(li);
+	document.write('<br />');	
+	// z, a, B, b, c, d, e
+
+	li.shfit();
+	document.write(li);
+	document.write('<br />');	
+	// a, B, b, c, d, e
+
+	li.pop();
+	document.write(li);
+	document.write('<br />');	
+	// a, B, b, c, d
+
+	li.sort();
+	document.write(li);
+	document.write('<br />');	
+	// a, B, b, c, d
+
+	li.reverse();
+	document.write(li);
+	document.write('<br />');
+	// d, c, b, B, a
+
+</script>
+</body>
+</html>

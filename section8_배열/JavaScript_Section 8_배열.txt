@@ -1,0 +1,68 @@
+배열
+
+배열(array)이란 연관된 데이터를 모아서 통으 관리하기 위해서 사용하는 데이터 타입이다.
+변수가 하나의 데이터를 저장하기 위한 것이라면 배열은 여러 개의 데이터를 하나의 변수에 저장하기 위한 것이라고 할 수 있다.
+
+var member = ['a', 'b', 'c']
+alert(member[0]);
+alert(member[1]);
+alert(member[2]);
+// a 출력 후, b 출력 후, c 출력
+// 색인(index)
+
+
+function get_members() {
+return ['a', 'b', 'c'];
+}
+var members = get_members();
+document.write(members[0]);
+document.write(members[1]);
+document.write(members[2]);
+// function을 이용한 배열
+
+
+function get_members() {
+return ['a', 'b', 'c']
+}
+var members = get_members();
+for(i = 0; i < members.length; i++) { // members.length는 배열에 담긴 값의 개수 = 3
+document.write(members[i].toUpperCase()); // members[i]에 담긴 문자를 대문자로 변환
+document.write('<br />'); // 줄바꿈
+}
+// A
+// B
+// C
+
+배열 조작 - 추가
+
+var li = ['a', 'b'];
+li.push('c');
+// a, b, c
+
+li = li.concat(['d', 'e'])
+// a, b, c, d, e
+
+li.unshift('z');
+// z, a, b, c, d, e
+
+li.splice(2, 0, 'B')
+// z, a, B, b, c, d, e
+// array.splice(인덱스, 인덱스에서부터 제거될 원소들의 수(0이면 아무것도 삭제되지 않음), 추가될 값들)
+
+배열 조작 - 제거, 정렬
+
+li.shift();
+// a, B, b, c, d, e
+// array.shift() : 첫 번째 원소 제거
+
+li.pop();
+// a, B, b, c, d
+// array.pop() : 마지막 원소 제거
+
+li.sort();
+// a, B, b, c, d
+// array.sort() : 정렬
+
+li.reverse();
+// d, c, b, B, a
+// array.reverse() : 역순 정렬
